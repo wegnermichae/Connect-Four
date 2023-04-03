@@ -21,7 +21,13 @@ def getInput():
     return row
 
 def updateBoard(board, input):
-    board[-1][input-1] = "R"
+    row = -1
+    if board[row][input-1] == "-":
+        board[row][input-1] = "R"
+    else:
+        row = -2
+        board[row][input-1] = "R"
+    
 
 
 
